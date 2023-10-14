@@ -19,30 +19,31 @@ for(let i=0; i<data.length; i++){
     `
     tbody.appendChild(newRow);
 }
+let tableData = [...document.querySelectorAll(".details-container tr")]
 function sortDec() {
-    data.sort((a,b)=> b.name>a.name ? 1 : -1)
+    tableData.sort((a,b)=> b.firstElementChild.innerText>a.firstElementChild.innerText ? 1 : -1)
     while (tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
-    for(let i=0; i<data.length; i++){
+    for(let i=0; i<tableData.length; i++){
         let newRow = document.createElement("TR");
         newRow.innerHTML = `
-        <td>${data[i].name}</td>
-        <td>${data[i].country}</td>
+        <td>${tableData[i].firstElementChild.innerText}</td>
+        <td>${tableData[i].lastElementChild.innerText}</td>
         `
         tbody.appendChild(newRow);
     }
 }
 function sortInc() {
-    data.sort((a,b)=> b.name>a.name ? -1 : 1)
+    tableData.sort((a,b)=> b.firstElementChild.innerText<a.firstElementChild.innerText ? 1 : -1)
     while (tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
-    for(let i=0; i<data.length; i++){
+    for(let i=0; i<tableData.length; i++){
         let newRow = document.createElement("TR");
         newRow.innerHTML = `
-        <td>${data[i].name}</td>
-        <td>${data[i].country}</td>
+        <td>${tableData[i].firstElementChild.innerText}</td>
+        <td>${tableData[i].lastElementChild.innerText}</td>
         `
         tbody.appendChild(newRow);
     }
