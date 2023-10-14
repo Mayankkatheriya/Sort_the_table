@@ -1,4 +1,6 @@
 let tbody = document.querySelector(".details-container");
+let text = document.querySelector("button span")
+console.log(text);
 let data = [
   { name: "Nelle Chambers", country: "Russian Federation" },
   { name: "Aretha Adkins", country: "Sweden" },
@@ -34,6 +36,8 @@ function sortDec() {
         <td>${tableData[i].lastElementChild.innerText}</td>
         `;
     tbody.appendChild(newRow);
+    text.style.transition = "all 0.5s ease-in-out"
+    text.innerText = "A-Z"
   }
 }
 function sortInc() {
@@ -51,8 +55,18 @@ function sortInc() {
         `;
     tbody.appendChild(newRow);
   }
+  text.style.transition = "all 2s ease-in-out"
+  text.innerText = "Z-A"
 }
-let btns = [...document.querySelectorAll("button")];
-
-btns[0].addEventListener("click", sortInc);
-btns[1].addEventListener("click", sortDec);
+let btn = document.querySelector("button");
+let order = false;
+btn.addEventListener("click", ()=>{
+  if (!order){
+    sortInc();
+    order = true;
+  }
+  else{
+    sortDec()
+    order = false;
+  }
+})

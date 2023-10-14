@@ -60,22 +60,30 @@ h1 {
 .buttons {
   width: 80%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
   gap: 1rem;
 }
 
 button {
-  width: 80px;
+  width: 150px;
   height: 50px;
   background-color: rgb(198, 241, 248);
-  border-radius: 50%;
+  border-radius: 20px;
   border: 1px solid brown;
   box-shadow: rgba(145, 143, 150, 0.4) 0 2px 4px,
     rgba(160, 154, 172, 0.3) 0 7px 13px -3px, #87bcdb 0 -3px 0 inset;
   font-weight: 700;
+  font-size: 16px;
   color: rgb(65, 68, 70);
+  text-align: center;
+  vertical-align: middle;
+}
+button span{
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 button:focus {
