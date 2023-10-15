@@ -2,7 +2,7 @@
 # Hosted Link: [→ Click Me ←](https://mayankkatheriya.github.io/Sort_the_table/)
 
 # UI:
-![image](https://github.com/Mayankkatheriya/Sort_the_table/assets/128832286/1c3848ae-f293-413d-9675-bd37bc9eb78c)
+![image](https://github.com/Mayankkatheriya/Sort_the_table/assets/128832286/80edceba-52e1-4da1-9c0a-2699fe662553)
 
 ---
 ## Explanation:
